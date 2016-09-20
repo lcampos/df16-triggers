@@ -44,7 +44,7 @@ public class TestDataUtil {
         for (Integer i = 0; i < iNum; i++) {
             Promo_Code__c opc = new Promo_Code__c();
             opc.Code__c = TestUtil.getRandomUniqueString(5);
-            opc.Discount__c = 100;
+            opc.Discount__c = 10;
             opc.Hotel__c = hotelID;
             opc.Is_Active__c = true;
 
