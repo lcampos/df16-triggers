@@ -1,10 +1,11 @@
 trigger ReservationTrigger on Reservation__c (after insert) {
-
-
+    // Map to store Promo_Code__c data.
     Map<String, Promo_Code__c> promoCodeMap = new Map<String, Promo_Code__c>();
-
+    // Map to store Room__c data.
     Map<Id, Room__c> roomMap = new Map<Id, Room__c>();
 
+    // Iterate over Reservation__c records and get PromoCode number
+    // and Room ids we'll have to query for.
     for (Reservation__c res : Trigger.new) {
 
         if (res.Promo_Code_Num__c != null) {
@@ -12,9 +13,9 @@ trigger ReservationTrigger on Reservation__c (after insert) {
         }
 
         roomMap.put(res.Room__c, null);
-
     }
 
+    // Query for Promo_Code__c data if needed.
     if (!promoCodeMap.isEmpty()) {
         for (Promo_Code__c pc : [select Id,
                                     Code__c,
@@ -27,14 +28,17 @@ trigger ReservationTrigger on Reservation__c (after insert) {
         }
     }
 
+    // Query for Room__c data if needed.
     if (!roomMap.isEmpty()) {
         for (Room__c room : [select Id, Price__c from Room__c where Id in :roomMap.keySet()]) {
             roomMap.put(room.Id, room);
         }
     }
 
+    // Invoice__c record list to store new records.
     List<Invoice__c> lInvoices = new List<Invoice__c>();
-
+    // Iterate over new Reservation__c records and create Invoice__c records
+    // using previously queried data.
     for (Reservation__c res : Trigger.new) {
         Integer resDays = res.Check_In__c.daysBetween(res.Check_Out__c);
 
@@ -50,6 +54,7 @@ trigger ReservationTrigger on Reservation__c (after insert) {
         lInvoices.add(invoice);
     }
 
+    // Create all Invoice__c records at once.
     insert lInvoices;
 
 }
