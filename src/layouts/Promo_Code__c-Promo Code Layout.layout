@@ -21,7 +21,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Is_Acitve__c</field>
+                <field>Is_Active__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>

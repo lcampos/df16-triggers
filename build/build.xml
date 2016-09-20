@@ -96,7 +96,7 @@
     </target>
 
     <!-- Deploy the unpackaged set of metadata retrieved with retrieveUnpackaged -->
-    <target name="deploy" depends="runTargetValidations,updateMetadata,create-static-res,resolvePasswordForTargetEnv">
+    <target name="deploy" depends="runTargetValidations,updateMetadata,resolvePasswordForTargetEnv">
         <echo message="Deploying : ${sf.target.username} ..."/>
         <sf:deploy username="${sf.target.username}" password="${sf.target.password}" serverurl="${sf.target.serverurl}"
         deployRoot="${src.dir}" checkOnly="${checkOnly}" logType="Debugonly" pollWaitMillis="20000"  maxPoll="50" runAllTests="false">

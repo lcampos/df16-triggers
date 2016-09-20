@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
+        <members>ReservationTrigger</members>
+        <name>ApexTrigger</name>
     </types>
     <types>
         <members>Bookings</members>
@@ -27,7 +23,11 @@
         <name>CustomTab</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Hotel__c-Hotel Layout</members>
+        <members>Invoice__c-Invoice Layout</members>
+        <members>Promo_Code__c-Promo Code Layout</members>
+        <members>Reservation__c-Reservation Layout</members>
+        <members>Room__c-Room Layout</members>
         <name>Layout</name>
     </types>
     <types>

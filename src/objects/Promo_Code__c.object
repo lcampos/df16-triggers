@@ -93,10 +93,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Is_Acitve__c</fullName>
+        <fullName>Is_Active__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>Is Acitve</label>
+        <label>Is Active</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -108,7 +108,7 @@
         <columns>Hotel__c</columns>
         <columns>Code__c</columns>
         <columns>Discount__c</columns>
-        <columns>Is_Acitve__c</columns>
+        <columns>Is_Active__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
