@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>TestReservationTrigger</members>
         <members>TestDataUtil</members>
+        <members>TestReservationTrigger</members>
         <members>TestUtil</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>ReservationTrigger</members>
+        <members>SessionSpeakerTrigger</members>
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>Bookings</members>
+        <members>DF16_Session_Mgmt</members>
         <name>CustomApplication</name>
     </types>
     <types>
-        <members>Hotel__c</members>
-        <members>Invoice__c</members>
-        <members>Promo_Code__c</members>
-        <members>Reservation__c</members>
-        <members>Room__c</members>
+        <members>Session_Speaker__c</members>
+        <members>Session__c</members>
+        <members>Speaker__c</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Hotel__c</members>
-        <members>Promo_Code__c</members>
-        <members>Reservation__c</members>
+        <members>Session__c</members>
+        <members>Speaker__c</members>
         <name>CustomTab</name>
     </types>
     <types>
-        <members>Hotel__c-Hotel Layout</members>
-        <members>Invoice__c-Invoice Layout</members>
-        <members>Promo_Code__c-Promo Code Layout</members>
-        <members>Reservation__c-Reservation Layout</members>
-        <members>Room__c-Room Layout</members>
+        <members>App_Logos</members>
+        <members>App_Logos/df_logo_png.png</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>Session_Speaker__c-Session Speaker Layout</members>
+        <members>Session__c-Session Layout</members>
+        <members>Speaker__c-Speaker Layout</members>
         <name>Layout</name>
     </types>
     <types>

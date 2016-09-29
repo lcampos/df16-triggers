@@ -44,81 +44,51 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
+    <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Promotional Codes for bookings.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Code__c</fullName>
-        <externalId>false</externalId>
-        <label>Code</label>
-        <length>100</length>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Discount__c</fullName>
-        <externalId>false</externalId>
-        <label>Discount</label>
-        <precision>18</precision>
-        <required>true</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Hotel__c</fullName>
+        <fullName>Session__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Hotel</label>
-        <referenceTo>Hotel__c</referenceTo>
-        <relationshipLabel>Promo Codes</relationshipLabel>
-        <relationshipName>Promo_Codes</relationshipName>
+        <label>Session</label>
+        <referenceTo>Session__c</referenceTo>
+        <relationshipLabel>Session Speakers</relationshipLabel>
+        <relationshipName>Session_Speakers</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Is_Active__c</fullName>
-        <defaultValue>false</defaultValue>
+        <fullName>Speaker__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Is Active</label>
+        <label>Speaker</label>
+        <referenceTo>Speaker__c</referenceTo>
+        <relationshipLabel>Session Speakers</relationshipLabel>
+        <relationshipName>Session_Speakers</relationshipName>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
+        <type>Lookup</type>
     </fields>
-    <label>Promo Code</label>
-    <listViews>
-        <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>Hotel__c</columns>
-        <columns>Code__c</columns>
-        <columns>Discount__c</columns>
-        <columns>Is_Active__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
+    <label>Session Speaker</label>
     <nameField>
-        <displayFormat>PC-{0000000}</displayFormat>
-        <label>Promo Code Name</label>
+        <displayFormat>SSPK-{00000000}</displayFormat>
+        <label>Session Speaker Name</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Promo Codes</pluralLabel>
+    <pluralLabel>Session Speakers</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

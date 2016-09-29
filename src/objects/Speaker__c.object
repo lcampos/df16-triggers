@@ -44,24 +44,32 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
+    <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Invoice for hotel reservation.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Discount__c</fullName>
+        <fullName>Email__c</fullName>
         <externalId>false</externalId>
-        <formula>&quot;$&quot; +  TEXT(Promo_Code__r.Discount__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Discount</label>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FirstName__c</fullName>
+        <externalId>false</externalId>
+        <label>FirstName</label>
+        <length>80</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -69,52 +77,44 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Promo_Code__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <fullName>LastName__c</fullName>
         <externalId>false</externalId>
-        <label>Promo Code</label>
-        <referenceTo>Promo_Code__c</referenceTo>
-        <relationshipLabel>Invoices</relationshipLabel>
-        <relationshipName>Invoices</relationshipName>
+        <label>LastName</label>
+        <length>80</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Reservation__c</fullName>
-        <externalId>false</externalId>
-        <label>Reservation</label>
-        <referenceTo>Reservation__c</referenceTo>
-        <relationshipLabel>Invoices</relationshipLabel>
-        <relationshipName>Invoices</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>Total__c</fullName>
-        <externalId>false</externalId>
-        <label>Total</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Invoice</label>
+    <fields>
+        <fullName>Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Speaker</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>FirstName__c</columns>
+        <columns>LastName__c</columns>
+        <columns>Title__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
-        <displayFormat>I-{00000000}</displayFormat>
-        <label>Invoice Name</label>
+        <displayFormat>SPK-{000000000}</displayFormat>
+        <label>Speaker Record</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Invoices</pluralLabel>
+    <pluralLabel>Speakers</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>
