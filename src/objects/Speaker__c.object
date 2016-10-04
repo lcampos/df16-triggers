@@ -47,6 +47,7 @@
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores speaker data.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -115,6 +116,18 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Speakers</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>FirstName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LastName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Email__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>FirstName__c</searchFilterFields>
+        <searchFilterFields>LastName__c</searchFilterFields>
+        <searchFilterFields>Email__c</searchFilterFields>
+        <searchResultsAdditionalFields>Email__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FirstName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LastName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Title__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

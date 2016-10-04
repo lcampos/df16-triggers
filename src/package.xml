@@ -2,7 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>TestDataUtil</members>
-        <members>TestReservationTrigger</members>
+        <members>TestSessionSpeakerTrigger</members>
         <members>TestUtil</members>
         <name>ApexClass</name>
     </types>
@@ -39,6 +39,10 @@
     <types>
         <members>*</members>
         <name>ListView</name>
+    </types>
+    <types>
+        <members>DF16_Triggers</members>
+        <name>PermissionSet</name>
     </types>
     <version>37.0</version>
 </Package>
